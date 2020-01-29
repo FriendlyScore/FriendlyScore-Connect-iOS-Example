@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func launchTapHandler(_ sender: Any) {
         //You need to Sign-up for the free API keys through our Developer Console.
         let clientId = ClientId(stringLiteral: "[YOUR_CLIENT_ID]")
-        let credentials = Credentials(clientId: clientId, userIdentifier: "[YOUR_IDENTIFIER]", environment: .sandbox)
+        let credentials = Credentials(clientId: clientId, userReference: "[YOUR_IDENTIFIER]", environment: .sandbox)
         
         FriendlyScore.eventsHandler = { event in
             switch event {

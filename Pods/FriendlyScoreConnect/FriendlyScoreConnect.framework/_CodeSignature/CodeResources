@@ -6,540 +6,88 @@
 	<dict>
 		<key>BankConsentViewController.nib/objects-13.0+.nib</key>
 		<data>
-		b7SCIsMzbiRyv/UFdlMjzxD4aqw=
+		L8vZ1kLFBZHPqWBrnbOZSV5Ol/4=
 		</data>
 		<key>BankConsentViewController.nib/runtime.nib</key>
 		<data>
-		MZ1Ne0O0ZNlhT9H0fzl1Oktm4sc=
+		3wTBC1qrDcRAwtYy1IsbRgRrcRs=
 		</data>
 		<key>BankDetailsViewController.nib/objects-13.0+.nib</key>
 		<data>
-		jDo5A7xLGd1bJxFCE/Sey9N6v5A=
+		Qh2KtrCPdbUU4VZIGQh+Z2pG9V8=
 		</data>
 		<key>BankDetailsViewController.nib/runtime.nib</key>
 		<data>
-		Iwkl3Vax2xfk2gaS6EPdn1T6g2o=
+		CIfWtQ9EcU+sh+skK7mfHzgl630=
 		</data>
 		<key>BankSelectCellCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
-		unn8LZo/CCM99qYdVA7pavxVcKI=
+		driabDqDwdcKyb93RfYG3PnzWYI=
 		</data>
 		<key>BankSelectCellCollectionViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		ykPEAQiCr8O7p+oHB1l5MW6g0Cg=
+		r6Us0e2SSbIz4eSndrrpul6k7JA=
 		</data>
 		<key>BankSelectCellCollectionViewCell.nib/runtime.nib</key>
 		<data>
-		rQHapGUKFsZxdzKMie9yZ1G2V1U=
+		dDnio+72VMNjr9s8LPW5RyA7xIg=
 		</data>
 		<key>BankSelectViewController.nib/objects-13.0+.nib</key>
 		<data>
-		+OYkuCZEd7k8F+B2ENjgxrWi3fA=
+		gibhOfXgmdHLk86MUrZjsdp2G4s=
 		</data>
 		<key>BankSelectViewController.nib/runtime.nib</key>
 		<data>
-		w6T+rOintIh5WFz+Cb2/gUxP8kY=
+		I+izJfGKLyI4qZUF2Fm55aL3dPk=
 		</data>
 		<key>BankThankYouViewController.nib/objects-13.0+.nib</key>
 		<data>
-		WcUd1aTNdUu2IlKLOQB8k88ZxDY=
+		2ZQDXNj1Qy+avA6rFSqsxxwNO6Y=
 		</data>
 		<key>BankThankYouViewController.nib/runtime.nib</key>
 		<data>
-		OsryeTJWHFCU+HH76tPNexWRhSo=
+		i2IOjMS+i1dJeKmRJcUVy8inX8M=
 		</data>
 		<key>ConsentDetailTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		gIYDYOYAlVQS4owjBcCYpS9wTdw=
+		zrb5SOa0JTShgojLQkdA8lAuKIE=
 		</data>
 		<key>ConsentDetailTableViewCell.nib/runtime.nib</key>
 		<data>
-		GtdoUsqU39nuU/PQqbGtlte7Jmg=
+		fFDRUu8cSpCd/uDR6nrSOp6O3k4=
 		</data>
 		<key>ConsentFooterTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		gro6OwTsRZLxGpn6fxrOXUeki/Q=
+		F684sLsteHYJ5bphgr0VxemeoT0=
 		</data>
 		<key>ConsentFooterTableViewCell.nib/runtime.nib</key>
 		<data>
-		NFQG0Iof+nqqFCCwCEu6Iaw+lEQ=
+		vRPK7+U1e4fWvXgRViLB9aC4P98=
 		</data>
 		<key>ConsentHeaderTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		O6llHY9FJ82QQNAQnr7+iWAWiKk=
+		jFgHqx8H7ce6VGmPYa0kIiS99w4=
 		</data>
 		<key>ConsentHeaderTableViewCell.nib/runtime.nib</key>
 		<data>
-		mvVeURo3iFEyWIVIEgaMJQ8GWtA=
+		kLsch6bN2riV9+Lv7g0qalvmMWE=
 		</data>
 		<key>ConsentTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		6pJaVlpzCm0lt3KMtOrC+SET4Xs=
+		ICBDdivQe9BQ50+6b03pKOjITJY=
 		</data>
 		<key>ConsentTableViewCell.nib/runtime.nib</key>
 		<data>
-		W60WFMriMOgkOTswDDLwB7w/D4s=
+		Z33jBNZRxgn6DxuXrgYvwPji/Jk=
 		</data>
 		<key>ConsentTitleTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		VNHS4/OJp8mmX4yt3l2dATDFsM0=
+		TBGKfZ/8ib7qofDmFqK2f0dYnf0=
 		</data>
 		<key>ConsentTitleTableViewCell.nib/runtime.nib</key>
 		<data>
-		u6AGZGP+I3aQMB8lACMP1PVQ3xs=
+		kSaRxPV96FOIidGcNy+9jahIbI0=
 		</data>
-		<key>GooglePlaces.bundle/Info.plist</key>
-		<data>
-		4Po/wh07BAjYgoIZvFanHfSoGnw=
-		</data>
-		<key>GooglePlaces.bundle/ar.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5aT+aj2Y0+lpWKDPIBOOOTVm7jk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-black.png</key>
-		<data>
-		jdDfLEvOCGC5NLJyCCRPochMYxs=
-		</data>
-		<key>GooglePlaces.bundle/build-with-google-black@2x.png</key>
-		<data>
-		vhIl2uf3lW9Fx3KPl43duxYJi14=
-		</data>
-		<key>GooglePlaces.bundle/build-with-google-black@3x.png</key>
-		<data>
-		FlwvnE0YZc+SRyddSz3jqr9wleE=
-		</data>
-		<key>GooglePlaces.bundle/build-with-google-white.png</key>
-		<data>
-		jOR/7+G+Xw1KouRwRyLIbDjjkHQ=
-		</data>
-		<key>GooglePlaces.bundle/build-with-google-white@2x.png</key>
-		<data>
-		t7SLR2p+C3ERZscBezSxv/O9/Jo=
-		</data>
-		<key>GooglePlaces.bundle/build-with-google-white@3x.png</key>
-		<data>
-		Y+b9y9P7e1QmPTjtE4UphKQfMX4=
-		</data>
-		<key>GooglePlaces.bundle/ca.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ifa1HugTULUGiwdMt9wPt9gliWg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/cs.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VGhTVQmopiIazrIVnjHPycvO/K0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/da.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qCIyd9bjC53u5JICidPExvGTdTY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/de.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uMK2qNn3IDgCO4llgYg7wzoISuw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/el.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			idrQTY3m2YNinZpjuoYxrkOb7Ts=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Kz2YpYwvsH9ZhqMa8OVLINSxtIc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_AU.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dn5Eh8XHXrOSS7dkpGt9WsqJ/bk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_GB.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dn5Eh8XHXrOSS7dkpGt9WsqJ/bk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_IN.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wncEcMsSTZES7NzTpp21RkWkjvU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			apXogz0N9bV5AHMcAsWBjmvqfpY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es_419.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kTqeevVVigiH8TLxhIGzYrG29Go=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es_MX.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kTqeevVVigiH8TLxhIGzYrG29Go=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TE+TPsQsD9fPMJ0NTKFo+QZDuDk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XrxTUV6fSsvBrpWTPXqT2/9hJdk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fr_CA.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			daCUdlRVvsyz9UDRkfSOQinYdis=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/he.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			b9C8HBtIi8wOR6F8lhwSly12p4A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			a7YFDK5kzACSRsO4c9OoYa6k+dg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZLUpV4vnVYmU0qYfVXO5mAvv/6o=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hu.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UmpSIS3/JK6f0UlC0Jz1s4tIorI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/id.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dfGEWsdn5AXeYsRuHarf/suh1po=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/it.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hB7CD03re1PfO4Ox8RlywABkl3w=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ja.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sEB4JMusN8sXUs/0wKYfwUepYmw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ko.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			99qmXwqJvrLbVy4s+03jT9pK5fk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/lt.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WFyEYZzyzu5gHC1TSdsGyh5SUrM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/lv.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5Oif5IHAifdwZ3KqpE68t2W0jPs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ms.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EZPysi8EYfRJaOmA5Ax9xzxuxss=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/nb.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ScNGQD/l4Bf5SNlqc4XjAtXq9Uo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/nl.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			b6q8RnUQt1JjdFTJJBoZUKwZmu8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/oss_licenses_places.txt.gz</key>
-		<data>
-		6ZKw7mcXP5GmkmFo51yjT7I7iCo=
-		</data>
-		<key>GooglePlaces.bundle/pl.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xVB0cHIxbUfBusBCUtwvMRwJCF4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KFRdWOqEMcqN63zKi/SpZzymAhk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt_BR.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KFRdWOqEMcqN63zKi/SpZzymAhk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt_PT.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xgdMImqUhcdZoOMWpgGyqUvy7XY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ro.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/Uu16wm2+TbM+KIOFUNkK2TRYkg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ru.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			li+1zp4vzcCkJ+mv5sEkX0VO7TI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud.png</key>
-		<data>
-		PsRzptNM/AouDlDfPPDhXQQbevM=
-		</data>
-		<key>GooglePlaces.bundle/sad_cloud@2x.png</key>
-		<data>
-		5z+xHVZtzmzb8faTbh8p63ksyQI=
-		</data>
-		<key>GooglePlaces.bundle/sad_cloud@3x.png</key>
-		<data>
-		BDS8meemU/ch8xTmgfeUVAZH80U=
-		</data>
-		<key>GooglePlaces.bundle/sad_cloud_dark.png</key>
-		<data>
-		XcYF9swP4I5uAZ+rFbKkOaVKPSY=
-		</data>
-		<key>GooglePlaces.bundle/sad_cloud_dark@2x.png</key>
-		<data>
-		xa7qRbWfj13G8pSATi7hdgHTSYA=
-		</data>
-		<key>GooglePlaces.bundle/sad_cloud_dark@3x.png</key>
-		<data>
-		cnAKIjQbERFrX4T+O4dASAQ664c=
-		</data>
-		<key>GooglePlaces.bundle/sk.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			d17gRQekXUUE0cjTqJ8oivow8C8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/sv.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			v2Q4EFj/pFdUVtmNmc2uMysv7fA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/th.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CNfIO92+b5RHWbg3OmelMvNJLdY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/tr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Fp3CyX3z+b99BNQnORi1Otksz3M=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/uk.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZBkgdGjQgJWq/r3Ywr4Ma6RVMnU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/vi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rnpW4i6X3ETqpKD1DUUHkSwTME8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_CN.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vjNYdpKePkoWEmX/9POanQtrDk4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_HK.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XP1fjy3c42TX9zFFgrV2+Mc7V10=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_TW.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Q4lZF0R4eBgDt/Ryo4sh5QRFE2o=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Headers/FriendlyScoreConnect-Swift.h</key>
 		<data>
 		JhC4LDUiat25yQLbBu1kFOppslQ=
@@ -556,17 +104,25 @@
 		<data>
 		DKK6LMXxBO7LfiLNraT41EEcXtA=
 		</data>
+		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		+pOZe4kU1mWGl85r1eDSCzNDELU=
+		</data>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		aqQsQFLE2zN08AgjlcLKYbW1DaQ=
+		Lz6UQ08rE18dJxW7r8D0N6Qusk8=
 		</data>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftdoc</key>
 		<data>
 		DKK6LMXxBO7LfiLNraT41EEcXtA=
 		</data>
+		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		+pOZe4kU1mWGl85r1eDSCzNDELU=
+		</data>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		aqQsQFLE2zN08AgjlcLKYbW1DaQ=
+		Lz6UQ08rE18dJxW7r8D0N6Qusk8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -574,19 +130,19 @@
 		</data>
 		<key>ThankYouFooterTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		H/CXZChpdeGAuQSZRc1BlPCISrk=
+		Rk526cNnVwwpOnXb/IASkx/9nIs=
 		</data>
 		<key>ThankYouFooterTableViewCell.nib/runtime.nib</key>
 		<data>
-		Af0amKy3s3wPxrs/Vt+4Ju8l/JA=
+		2eWNWUMIRl8+WwpQ4yy0oAn1TI8=
 		</data>
 		<key>ThankYouTitleTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
-		dTX4ENioyCLXaQ3mo84On+v7Vco=
+		oaGc50PE+a6bcI78R7/s6VrgXSU=
 		</data>
 		<key>ThankYouTitleTableViewCell.nib/runtime.nib</key>
 		<data>
-		35xQl5TBEeOFu2UqFYfIQV7r1wc=
+		bZFMBJL9A1RyRnZ6S4jy2H/Mk/Y=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -595,642 +151,148 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qyhFWUCQiBQAURlOnBxtsYRvchRuAdGvD5YiWr4WJyk=
+			/e7XzdJuscf0eU+eXotLc7Le+V2Au5MF79kOkEJ6bU8=
 			</data>
 		</dict>
 		<key>BankConsentViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ivVWt3aU6ax9/Gsuh1ZatBGVobSUs2XhGBoVnZ1Q9A=
+			/LUjWhw5Q2kUcGmm+i7GTMxIWoXbsxjq7FqTaSchUk0=
 			</data>
 		</dict>
 		<key>BankDetailsViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oxDuMdIXlhxFqX9F0jPdYK4a/mU30VeTkN7fcB+iRVs=
+			UZhDF1XObDYQ2tvLEkUgnTtPVhuW6OWZ0dHYMoYLkZk=
 			</data>
 		</dict>
 		<key>BankDetailsViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sANvTM0gZ5F9MVbrosdS3CEF3WkY6QqWiQ9wtekoFo8=
+			Axd2rDAMfH5gCTc524dUJrnqj3O1+ElGDRElts0nUoo=
 			</data>
 		</dict>
 		<key>BankSelectCellCollectionViewCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RrVwvz5eJqZimnbRk484CJVLAyNo6SWV6z2U3RHiAaw=
+			aBdzrKntyeAfuNPOQSE7KwxhFQutIXVD0D8zimIahUo=
 			</data>
 		</dict>
 		<key>BankSelectCellCollectionViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HJpVEyx+1bXHaa881Jh7x4evSOWJatsIyu401fU4s8s=
+			/KbFLb83lIG+UOnxdL3feDLizl6avtkfAEMc/xEFRIM=
 			</data>
 		</dict>
 		<key>BankSelectCellCollectionViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Elt7Nj/hq6Q9ahIKa7y1+az/46KcFE27ofMcLc6X0g=
+			ZD9v79rSnDxaLgqDIknFnhP9sfvEZED5U0hg/XE5Dv8=
 			</data>
 		</dict>
 		<key>BankSelectViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8aAoeW5hILNEYeUBGfCDm6jiMMHE281SzTllKrY0QCQ=
+			lgw5kqD55Xr/AgoOK6WfxLn5kobhIUDlTl0GJyYb4BE=
 			</data>
 		</dict>
 		<key>BankSelectViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OS1rXjhQjGNXMJu/IQqTAjrSqvIoqCu+Tl4z1jxdB+0=
+			BiG4laTqtJLvaTgNPdlDcOfqOjBP9UzzUWfJp4ukRvc=
 			</data>
 		</dict>
 		<key>BankThankYouViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QSHjm305+nJCybG1v5qKNwITheeAkJIjFXqfoucGNpA=
+			N4lhJoC1F+G7DrPRLaumcxM7nPK3lF95ZguefWq+oUY=
 			</data>
 		</dict>
 		<key>BankThankYouViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mb1JEjQxG6foC4dtUBDv6waDUOUzRLAUjxpY738ztU4=
+			DQ/kzo6KdHEOXEd7SdpNW5sAtXoLOeSSPwUXAN1Nock=
 			</data>
 		</dict>
 		<key>ConsentDetailTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SdF1jrNvdR6FE29/TnNnn3nq//8rQ/pERGjbrj69Nzo=
+			lrqzrAi/HJy16MlyXqfVW27u8mGnjFuLfuIjv1laxDg=
 			</data>
 		</dict>
 		<key>ConsentDetailTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d5tNUC0SMaGKNbPybUjzL7n3SW10EnQlkc7qg5opTGI=
+			/9gOEq5clrFHdUkjzQ+RfC6xYRvgEHl2AGn7KlHie6A=
 			</data>
 		</dict>
 		<key>ConsentFooterTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6aeEf1vs36n0I1YDqXs3XOs2sWX2dROCc/a8jXbJy/k=
+			xlLYQ2zeemiw6NLxg8KYfi+IGwEnkzjlC2sKpm3D2is=
 			</data>
 		</dict>
 		<key>ConsentFooterTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pmIf2KinR/uoGFm6fAn06gJKqksfsmCGHkdMhAMcqZ8=
+			T4P9FfuBLc2BTmEaA2BpZUjCtvv+lbrScmX0++c8IFQ=
 			</data>
 		</dict>
 		<key>ConsentHeaderTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5BPQ4evWtXfr0YG9KAcm6FcKGNUwteY4rUJ3P62qxHQ=
+			RfSgPcVf7pzcZEZerqMcObz2f1XE55PJEFHJmox7KHc=
 			</data>
 		</dict>
 		<key>ConsentHeaderTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			idFmPLXD2vgV5XBscqYLta8Ilg4H3DDD3eur/2lP5i0=
+			mavhyIKdrdwfjPUwFuOpKpza5/z9S+ViXfsOYwQ/81s=
 			</data>
 		</dict>
 		<key>ConsentTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XWcYG8DoXKkBNPc9A3Ktf4mcGBbH7N27oZU7d4ys09s=
+			pSkjxQlr89pWitR/PD0uG267dwK3RQ7NfgegW1mmT+4=
 			</data>
 		</dict>
 		<key>ConsentTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qmpGQk1tTw7YFXm8AoiptVCsJjUGi+VkOxIM77cLOPU=
+			SM/wSQ4qkePCq97tzdykJra19b0GZKB4sGhSFSqHP9c=
 			</data>
 		</dict>
 		<key>ConsentTitleTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M34HW+pbD2BqDdbyQ103KVSNHo341PybCl9l7Mr2Afc=
+			T+inyUKjzaseyCMI9e88NU4NNuQYEOTvzuWFwQYvbMw=
 			</data>
 		</dict>
 		<key>ConsentTitleTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZOjD5toK3ZIV41OfcHIA6uoVB32gQ8tC4F4uf0Q/ao0=
+			fSQFk8jilbjwx2CCi4EUinysfWvefG4jnSyoXyNl+nY=
 			</data>
-		</dict>
-		<key>GooglePlaces.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ionXmrgonAIb2CS0KtsXSpTJNpj2xqyHlOn/zqFN4fs=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/ar.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PMYHS39LdiWhLXHWsf/RySW/GMftdnWPBzvUWv5Tf/A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-black.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tsUYQ830lSOcW0EEXtESY2/PmN/P3iYCnHdxz+CDXpE=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-black@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			s0RHdq6qRaW4kvQ2FCcYLckJXV7bHC3Sd//OXBf1/ws=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-black@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6Qm4Lo614Nls3pMfakkRFjSZCWfVRZJmloQ7EwU0vuw=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-white.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PqZnb77RuMzTiDj2mtLrBn0piXF/njpjHS+868aO+5U=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-white@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			97VUOJI8R0HwYIx+V4v/P2PcunFmU9e+sLBTu4hZJXk=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/build-with-google-white@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KokBg4wqLB02up8HOQ2/hgNgGKd7mnlGI+cBVdev51E=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/ca.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vORfnrRHuksayqALv4Xdcy7Ln1Zgbyf2jwe5SVNJMZs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/cs.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6KYm0L6jkWnEW5eu+Ld+REOv9YnTRZEqtW7IeV3z2yM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/da.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rJ9p/gnh32LGvhIZ8dNhcw3PekDavvrQwp4QOPkxQ/E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/de.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PEDDTUhTon53nsQFMJGsgy3nl4b183XI3nH1UQ8jLhk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/el.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			APCImirvcuq3UfnliRkZqttvUadNrvemUmVh/BN2i3s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9Yrs0HasM6znffmU3qJu7mqNW+E5nWmsdQMye2BpvCg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_AU.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cL8SBsDSGxVzOdDTKDryOlnPdoSHiOhngaBPF9zcCg8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_GB.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cL8SBsDSGxVzOdDTKDryOlnPdoSHiOhngaBPF9zcCg8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/en_IN.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZuAc8ZCBaAImgzcMBjkcGfL1+MzkPqnf6WqtMX8h+2g=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CtiFJmrsP1nPjL8eCoJnZRCNHtb+GHY3fkKhm0fV0JQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es_419.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			kYM4YQ5c7tleUz75nYMd2QdNaZ6rOVSzjayyJEt8lps=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/es_MX.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			kYM4YQ5c7tleUz75nYMd2QdNaZ6rOVSzjayyJEt8lps=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+m1oVBZWWBumvajRfnxX/yKfTxuGhCLaTfb3Vo9KwTI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AIszkkOkVctdMXgHdCC5tZNTk2jaksFx5GS9c3Aj84U=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/fr_CA.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			52pgxQhwXvwwjGHCw/o+UbqRLkN94IcgNz8VSe3/rh8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/he.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GVp/xCfrfSLLiHlAOKuJNwAlNVULQkZdfeloDeOA4nc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sXl/1xz2eb2bMvAsIHsDMY8N9G63LpVig86yqvhU7LE=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BTwlV6RUgLJdNVMIQsa+7q8dsliP3Six3rlsxDooa5o=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/hu.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QvIGrG0kIkeKOv88s9JFEka9S929KTTYdishtn9mJ84=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/id.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oMK1bQ8cIiCq4jH1uz8EqdQlZQsimXKJ+Tsj3daazso=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/it.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XuOe1F2WiYPqj2+q7+BJ8xRmt/Ezzj/N+cwcujyrO8A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ja.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dQlKXJUh9NDvbXv4M1XmrLg2K+kVVFsyX0oABRO/0gk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ko.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			o2ZyoY0KsHHfAMLSMEhwj2Cbx0skbEKTnR4rKbRnjZs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/lt.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NM2BT1aNTOJsk/P8+8xYO4H8zqKzAjCwGNHGKuQGDFo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/lv.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Yaj2qGm9GJXVlboSBA5YqV5/YjENTRpKebhQ5+erDSU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ms.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r11g1yqC4wMIsNj1KLYhcHEqf8M6rQ+4KgoC3Q4DOBA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/nb.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jlUEQnf/PzdomnfCosGAWfvLsp7tc0ZggLPuvYePiF0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/nl.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TP3rQpvl+5CaS0KEfgF1kcuHyoS5TfQe2d90eFvzpB8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/oss_licenses_places.txt.gz</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GIbVJqkMB5oyKi3kdCa6XNGkVqYI7NjV1yIGcyexRp8=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/pl.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/dEuwmE30YUSjh3abAYJ4NOxatSqpWxvUgxDzgtP4Ks=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PCwWfquStYYvGaqLJejPBbEAAautdQ69t6lFVG0zMVc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt_BR.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PCwWfquStYYvGaqLJejPBbEAAautdQ69t6lFVG0zMVc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/pt_PT.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			g9d8ICkC5/+qdaPbvH3sNgmj/fZzweBlSC+3gv8VAms=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ro.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1IpqBRNco1bv7t6QNTyzi9CeC23zpSYpqhTbclp03wY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/ru.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/uXNpk08+uWkWM9EshmuL/9g4B6KK4D7SHrIBRQP0uM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dgwpBkxQHg1ZTUMN7q4FQIO1luJBpUQiqI8LKXlrWkc=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KMbvAGHTlq7+dXgIzu8vsfBsz8uh1J3/8Vrbmonpi+4=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vbv7TRmlyWPLvgJx0gmmLrQ20rMxc89xxeepKIZ+SpI=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud_dark.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hUco+sCawbJthy3FhUpM/eZd+uQXi4cAnP2OVej/U6Y=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud_dark@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sOjFonV+gy9C7g3+kyWkrfQusoEkwJcbDwYEMJ979ac=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sad_cloud_dark@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hrt+khO959LhgecvMx8b5PbjcZbb7qzw8R1WyQGJRDQ=
-			</data>
-		</dict>
-		<key>GooglePlaces.bundle/sk.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ukS12t0q2uxEW5L7IWLJQPBqVPMY3y1Gvtp5jY1SEes=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/sv.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2xFa4WOdGwnuwlodT2JC1FRPgP+c8f+v7GsJHvjGSFg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/th.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xjbp6+sACclsnX9/E3IKP+xDnmiG+TOI6EdjEdpVY6s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/tr.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			riD3OUsg7VbYPsxeqAOtRSkFh5gl2eU295hBOhuLBZo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/uk.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			im7glrdzSouOSQLZ0w0+x96n1y+BLZvxo3F/G+r3FUo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/vi.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			leM3Y8sfgR3sRZZTpGVRzHv17+mL4hpkz84zfdIIeME=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_CN.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UfruBpZrAJEd4xlCpPIIko27nBdTI0yKU4mb+lJVN1A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_HK.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4GTYyvmhSg8IV9WY0ZhmE/aH6qLKIMhRZoVpl5rRyJ0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>GooglePlaces.bundle/zh_TW.lproj/GooglePlaces.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QnXwzty/qCh0dRFeTZYgL7WNbNckVQYPLbumCV+HfWk=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Headers/FriendlyScoreConnect-Swift.h</key>
 		<dict>
@@ -1253,11 +315,18 @@
 			MuO9fxjfZ20o02BOFVF6Ox/WgmvPQMi17K/zctR+fQ8=
 			</data>
 		</dict>
+		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zm9P0f4s2kh94JEicaiP0D36JAuE4k8KlObk2ffzehk=
+			</data>
+		</dict>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			20BPrGsjwIcoexc68M5vvf+2xtn6rU+e3VJYaSzHQfU=
+			fP/aORq+RnniZ5Ic2SPt+FV0mkQF7Hpc74wKtZCy1Cc=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftdoc</key>
@@ -1267,11 +336,18 @@
 			MuO9fxjfZ20o02BOFVF6Ox/WgmvPQMi17K/zctR+fQ8=
 			</data>
 		</dict>
+		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zm9P0f4s2kh94JEicaiP0D36JAuE4k8KlObk2ffzehk=
+			</data>
+		</dict>
 		<key>Modules/FriendlyScoreConnect.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			20BPrGsjwIcoexc68M5vvf+2xtn6rU+e3VJYaSzHQfU=
+			fP/aORq+RnniZ5Ic2SPt+FV0mkQF7Hpc74wKtZCy1Cc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1285,28 +361,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DwVo6V6b/nHowoA9s+CxT6OQdeavvQC4S42LEx+1/lY=
+			n6e3EZxH3sGp5wO2ARlwETQtDdsucgh0ZOxYnHbu48g=
 			</data>
 		</dict>
 		<key>ThankYouFooterTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fcSAvNbcs44FxFuonAxFdmI+EsiRbRtgnyQMxMZy2tw=
+			F2X4ZvcaTPBmp5vtHQViTPOrdMZqCxTSy1agt+tx1SA=
 			</data>
 		</dict>
 		<key>ThankYouTitleTableViewCell.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KaLSXBU3/F6Ki9j6P5ZlW4UhA44pFCIKR5VwhXA4TtY=
+			kdGZQ8egUtC1TeBwsXax4w3j4/dYgT+wvmjsx3XFteQ=
 			</data>
 		</dict>
 		<key>ThankYouTitleTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lDggd7krm5UlLXp9myd/oGBsKvxx1mUgpvd8Q6YxVAg=
+			UlL+X09ri+UGpaxjTpfwXln1SNq+HvTWkYi/lOgsJCA=
 			</data>
 		</dict>
 	</dict>

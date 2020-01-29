@@ -100,7 +100,6 @@
 				9C671F0D23D71B5400C1A580 /* Frameworks */,
 				9C671F0E23D71B5400C1A580 /* Resources */,
 				055C1D33190AB2D1E5C903F1 /* [CP] Embed Pods Frameworks */,
-				04820254A457D4F4ECA92630 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,23 +157,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04820254A457D4F4ECA92630 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FriendlyScoreConnectDemo/Pods-FriendlyScoreConnectDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FriendlyScoreConnectDemo/Pods-FriendlyScoreConnectDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FriendlyScoreConnectDemo/Pods-FriendlyScoreConnectDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		055C1D33190AB2D1E5C903F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,7 +356,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "YOUR-CLIENT-ID";
+				PRODUCT_BUNDLE_IDENTIFIER = "YOUR-BUNDLE-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -393,7 +375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "YOUR-CLIENT-ID";
+				PRODUCT_BUNDLE_IDENTIFIER = "YOUR-BUNDLE-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
