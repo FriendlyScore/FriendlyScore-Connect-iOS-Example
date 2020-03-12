@@ -32,6 +32,7 @@
 				9DDF0E090C06BA68E70EAC02CE90CC8F /* PBXTargetDependency */,
 				A4499E0CD41F8E44474319F25E33B0D1 /* PBXTargetDependency */,
 				C111AB7BCD2A3A8B941CE8F390E0E67F /* PBXTargetDependency */,
+				6A0283E8E1340CDB1902DB993DA16E2A /* PBXTargetDependency */,
 				E967C852E8B464F6637A451D0914F295 /* PBXTargetDependency */,
 			);
 			name = FriendlyScoreCore;
@@ -510,6 +511,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 17F9141D333DA1A7BE5937F227221070;
 			remoteInfo = Moya;
+		};
+		E421065BAC5104F5E96294065FCD26CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E163AC315AD24CFBD60C178D602BFC83;
+			remoteInfo = Result;
 		};
 		E60F284B76B71B2F2DD2757A1A896F39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2643,6 +2651,12 @@
 			name = JGProgressHUD;
 			target = 6F3964F174D0EBFB0D64F8DBC20E1429 /* JGProgressHUD */;
 			targetProxy = 375C7C865EACC46CC857050DC959B9A9 /* PBXContainerItemProxy */;
+		};
+		6A0283E8E1340CDB1902DB993DA16E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Result;
+			target = E163AC315AD24CFBD60C178D602BFC83 /* Result */;
+			targetProxy = E421065BAC5104F5E96294065FCD26CB /* PBXContainerItemProxy */;
 		};
 		82EA484F9F4EEB2BD40C1A33A14B0A9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -181,8 +181,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreGraphics;
+@import CoreLocation;
 @import Foundation;
+@import MapKit;
+@import ObjectiveC;
 @import QuartzCore;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -201,6 +206,129 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+
+@class NSCoder;
+
+SWIFT_CLASS("_TtC20FriendlyScoreConnect6Button")
+@interface Button : UIButton
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC20FriendlyScoreConnect5Label")
+@interface Label : UILabel
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC20FriendlyScoreConnect8Location")
+@interface Location : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+
+
+@interface Location (SWIFT_EXTENSION(FriendlyScoreConnect)) <MKAnnotation>
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@end
+
+
+SWIFT_CLASS("_TtC20FriendlyScoreConnect9TextField")
+@interface TextField : UITextField
+- (CGRect)leftViewRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
+- (CGRect)textRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
+- (CGRect)editingRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UIView (SWIFT_EXTENSION(FriendlyScoreConnect))
+@property (nonatomic) BOOL circleCorner;
+@property (nonatomic) CGFloat cornerRadius;
+@property (nonatomic, strong) UIColor * _Nullable borderColor;
+@property (nonatomic) CGFloat borderWidth;
+@property (nonatomic, strong) UIColor * _Nullable shadowColor;
+@property (nonatomic) CGSize shadowOffset;
+@property (nonatomic) double shadowOpacity;
+@property (nonatomic) CGFloat shadowRadius;
+@property (nonatomic) CGPathRef _Nullable shadowPath;
+@property (nonatomic) BOOL shadowShouldRasterize;
+@property (nonatomic) CGFloat shadowRasterizationScale;
+@property (nonatomic) BOOL maskToBounds;
+@end
 
 
 

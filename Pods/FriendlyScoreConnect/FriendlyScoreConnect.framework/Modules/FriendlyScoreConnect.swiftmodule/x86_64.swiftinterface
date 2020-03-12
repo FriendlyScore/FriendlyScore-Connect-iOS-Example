@@ -2,16 +2,264 @@
 // swift-compiler-version: Apple Swift version 5.1.3 effective-4.1.50 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreConnect
 import Alamofire
+import AudioToolbox
+import Contacts
+import ContactsUI
+import CoreLocation
+import CoreTelephony
 import Foundation
 @_exported import FriendlyScoreConnect
 import FriendlyScoreCore
 import JGProgressHUD
 import Kingfisher
+import MapKit
 import Moya
 import ObjectMapper
+import Photos
 import Result
 import Swift
 import UIKit
+public struct Contact {
+  public init(contact: Contacts.CNContact)
+}
+@objc open class Button : UIKit.UIButton {
+  public typealias Action = (FriendlyScoreConnect.Button) -> Swift.Void
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func action(_ closure: @escaping FriendlyScoreConnect.Button.Action)
+  @objc deinit
+}
+@objc open class Label : UIKit.UILabel {
+  public typealias Action = (FriendlyScoreConnect.Label) -> Swift.Void
+  open var insets: UIKit.UIEdgeInsets
+  @objc override dynamic open func drawText(in rect: CoreGraphics.CGRect)
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  public func action(_ closure: @escaping FriendlyScoreConnect.Label.Action)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIColor {
+  public var hexString: Swift.String {
+    get
+  }
+  public var shortHexString: Swift.String? {
+    get
+  }
+  public var rgbComponents: (red: Swift.Int, green: Swift.Int, blue: Swift.Int) {
+    get
+  }
+  public var cgFloatComponents: (red: CoreGraphics.CGFloat, green: CoreGraphics.CGFloat, blue: CoreGraphics.CGFloat) {
+    get
+  }
+  public var hsbaComponents: (hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat) {
+    get
+  }
+  public static var random: UIKit.UIColor {
+    get
+  }
+}
+extension UIColor {
+  convenience public init(hex: Swift.Int, alpha: CoreGraphics.CGFloat)
+  convenience public init(hex: Swift.Int)
+  convenience public init(hexString: Swift.String)
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int, transparency: CoreGraphics.CGFloat = 1)
+}
+extension Array where Element : Swift.Equatable {
+  public func contains(_ elements: [Element]) -> Swift.Bool
+  public func indexes(of item: Element) -> [Swift.Int]
+  mutating public func removeAll(_ item: Element)
+  public func chunk(size: Swift.Int = 1) -> [[Element]]
+}
+extension Array {
+  public var randomItem: Element? {
+    get
+  }
+  public var shuffled: [Element] {
+    get
+  }
+  mutating public func shuffle()
+  public func item(at index: Swift.Int) -> Element?
+}
+public struct LocaleInfo {
+  public var locale: Foundation.Locale?
+  public var id: Swift.String? {
+    get
+  }
+  public var country: Swift.String
+  public var code: Swift.String
+  public var phoneCode: Swift.String
+  public var flag: UIKit.UIImage? {
+    get
+  }
+  public var currencyCode: Swift.String? {
+    get
+  }
+  public var currencySymbol: Swift.String? {
+    get
+  }
+  public var currencyName: Swift.String? {
+    get
+  }
+}
+public enum AttributedTextBlock {
+  case header1(Swift.String)
+  case header2(Swift.String)
+  case normal(Swift.String)
+  case list(Swift.String)
+}
+@objc public class Location : ObjectiveC.NSObject {
+  final public let name: Swift.String?
+  final public let location: CoreLocation.CLLocation
+  final public let placemark: CoreLocation.CLPlacemark
+  public var address: Swift.String {
+    get
+  }
+  public init(name: Swift.String?, location: CoreLocation.CLLocation? = nil, placemark: CoreLocation.CLPlacemark)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Location : MapKit.MKAnnotation {
+  @objc dynamic public var coordinate: CoreLocation.CLLocationCoordinate2D {
+    @objc get
+  }
+  @objc dynamic public var title: Swift.String? {
+    @objc get
+  }
+}
+@IBDesignable extension UIView {
+  @objc @IBInspectable dynamic public var circleCorner: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowOffset: CoreGraphics.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowOpacity: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowPath: CoreGraphics.CGPath? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowShouldRasterize: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var shadowRasterizationScale: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var maskToBounds: Swift.Bool {
+    @objc get
+    @objc set
+  }
+}
+extension UIView {
+  public var size: CoreGraphics.CGSize {
+    get
+    set
+  }
+  public var width: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var height: CoreGraphics.CGFloat {
+    get
+    set
+  }
+}
+extension UIView {
+  public typealias Configuration = (UIKit.UIView) -> Swift.Void
+  public func config(configurate: UIKit.UIView.Configuration?)
+  public func roundCorners(_ corners: UIKit.UIRectCorner, radius: CoreGraphics.CGFloat)
+}
+extension UIImageView {
+  open func setImage(string: Swift.String?, color: UIKit.UIColor? = nil, circular: Swift.Bool = false, textAttributes: [Foundation.NSAttributedStringKey : Any]? = nil)
+}
+extension String {
+  public var initials: Swift.String {
+    get
+  }
+}
+public typealias GradientColors = (top: UIKit.UIColor, bottom: UIKit.UIColor)
+extension UIImageView {
+  public func setImageForName(string: Swift.String, backgroundColor: UIKit.UIColor? = nil, circular: Swift.Bool, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]?, gradient: Swift.Bool = false)
+  public func setImageForName(string: Swift.String, gradientColors: FriendlyScoreConnect.GradientColors? = nil, circular: Swift.Bool = true, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]? = nil)
+  public func setImageForName(string: Swift.String, backgroundColor: UIKit.UIColor? = nil, circular: Swift.Bool, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]? = nil, gradient: Swift.Bool = false, gradientColors: FriendlyScoreConnect.GradientColors? = nil)
+}
+public struct Contacts {
+  public enum FetchResults {
+    case success(response: [Contacts.CNContact])
+    case error(error: Swift.Error)
+  }
+  public enum FetchResult {
+    case success(response: Contacts.CNContact)
+    case error(error: Swift.Error)
+  }
+  public enum GroupedByAlphabetsFetchResults {
+    case success(response: [Swift.String : [Contacts.CNContact]])
+    case error(error: Swift.Error)
+  }
+  public static func requestAccess(_ requestGranted: @escaping (Swift.Bool, Swift.Error?) -> ())
+  public static func authorizationStatus(_ requestStatus: @escaping (Contacts.CNAuthorizationStatus) -> ())
+  public static func fetchContacts(completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+  @available(iOS 10.0, *)
+  public static func fetchContacts(ContactsSortorder sortOrder: Contacts.CNContactSortOrder, completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+  @available(iOS 10.0, *)
+  public static func fetchContactsGroupedByAlphabets(completionHandler: @escaping (FriendlyScoreConnect.Contacts.GroupedByAlphabetsFetchResults) -> ())
+  public static func fetchContactsOnBackgroundThread(completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+  public static func searchContact(searchString string: Swift.String, completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+  public static func getContactFromID(Identifires identifiers: [Swift.String], completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+}
+public struct Telephone {
+  public static func isCapableToCall(completionHandler: @escaping (Swift.Bool) -> ())
+  public static func isCapableToSMS(completionHandler: @escaping (Swift.Bool) -> ())
+  public static func CNPhoneNumberToString(CNPhoneNumber: Contacts.CNPhoneNumber) -> Swift.String
+  public static func makeCall(CNPhoneNumber: Contacts.CNPhoneNumber)
+}
+public func Log<T>(_ object: T?, filename: Swift.String = #file, line: Swift.Int = #line, funcname: Swift.String = #function)
+public typealias TelegramSelection = (FriendlyScoreConnect.TelegramSelectionType) -> ()
+public enum TelegramSelectionType {
+  case photo([Photos.PHAsset])
+  case location(FriendlyScoreConnect.Location?)
+  case contact(FriendlyScoreConnect.Contact?)
+}
+extension UIAlertController {
+  public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffectStyle? = nil, completion: (() -> Swift.Void)? = nil)
+}
+public func < <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Comparable
+public func > <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Comparable
+public func == <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Equatable
+extension UITextView {
+  public func scrollToBottom()
+  public func scrollToTop()
+}
 public class DateFormatTransform : ObjectMapper.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
@@ -19,8 +267,174 @@ public class DateFormatTransform : ObjectMapper.TransformType {
   public func transformToJSON(_ value: Foundation.Date?) -> FriendlyScoreConnect.DateFormatTransform.JSON?
   @objc deinit
 }
+extension UITextField {
+  public typealias TextFieldConfig = (UIKit.UITextField) -> Swift.Void
+  public func config(textField configurate: UIKit.UITextField.TextFieldConfig?)
+}
+extension UITextField {
+  public func setPlaceHolderTextColor(_ color: UIKit.UIColor)
+  public func placeholder(text value: Swift.String, color: UIKit.UIColor = .red)
+}
+public struct Assets {
+  public static func requestAccess(_ requestGranted: @escaping (Photos.PHAuthorizationStatus) -> ())
+  public enum FetchResults {
+    case success(response: [Photos.PHAsset])
+    case error(error: Swift.Error)
+  }
+  public static func fetch(_ completion: @escaping (FriendlyScoreConnect.Assets.FetchResults) -> Swift.Void)
+  public enum ResolveResult {
+    case success(response: UIKit.UIImage?)
+    case error(error: Swift.Error)
+  }
+  public static func resolve(asset: Photos.PHAsset, size: CoreGraphics.CGSize = PHImageManagerMaximumSize, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  public enum ResolveResults {
+    case success(response: [UIKit.UIImage])
+    case error(error: Swift.Error)
+  }
+  public static func resolve(assets: [Photos.PHAsset], size: CoreGraphics.CGSize = CGSize(width: 720, height: 1280), completion: @escaping ([UIKit.UIImage]) -> Swift.Void) -> [UIKit.UIImage]
+}
 extension FriendlyScore {
   public static func configureConnect()
+}
+extension Date {
+  public var calendar: Foundation.Calendar {
+    get
+  }
+  public var era: Swift.Int {
+    get
+  }
+  public var year: Swift.Int {
+    get
+    set
+  }
+  public var quarter: Swift.Int {
+    get
+  }
+  public var month: Swift.Int {
+    get
+    set
+  }
+  public var weekOfYear: Swift.Int {
+    get
+  }
+  public var weekOfMonth: Swift.Int {
+    get
+  }
+  public var weekday: Swift.Int {
+    get
+  }
+  public var day: Swift.Int {
+    get
+    set
+  }
+  public var hour: Swift.Int {
+    get
+    set
+  }
+  public var minute: Swift.Int {
+    get
+    set
+  }
+  public var second: Swift.Int {
+    get
+    set
+  }
+  public var nanosecond: Swift.Int {
+    get
+  }
+  public var isInFuture: Swift.Bool {
+    get
+  }
+  public var isInPast: Swift.Bool {
+    get
+  }
+  public var isInToday: Swift.Bool {
+    get
+  }
+  public var iso8601String: Swift.String {
+    get
+  }
+  public var nearestFiveMinutes: Foundation.Date {
+    get
+  }
+  public var nearestTenMinutes: Foundation.Date {
+    get
+  }
+  public var nearestHourQuarter: Foundation.Date {
+    get
+  }
+  public var nearestHalfHour: Foundation.Date {
+    get
+  }
+  public var timeZone: Foundation.TimeZone {
+    get
+  }
+  public var unixTimestamp: Swift.Double {
+    get
+  }
+}
+extension Date {
+  mutating public func add(_ component: Foundation.Calendar.Component, value: Swift.Int)
+  public func adding(_ component: Foundation.Calendar.Component, value: Swift.Int) -> Foundation.Date
+  public func changing(_ component: Foundation.Calendar.Component, value: Swift.Int) -> Foundation.Date
+  public func beginning(of component: Foundation.Calendar.Component) -> Foundation.Date?
+  public func end(of component: Foundation.Calendar.Component) -> Foundation.Date?
+  public func dateString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
+  public func dateTimeString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
+  public func isInCurrent(_ component: Foundation.Calendar.Component) -> Swift.Bool
+  public func timeString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
+}
+extension Date {
+  public init(calendar: Foundation.Calendar? = Calendar.current, timeZone: Foundation.TimeZone? = TimeZone.current, era: Swift.Int? = Date().era, year: Swift.Int? = Date().year, month: Swift.Int? = Date().month, day: Swift.Int? = Date().day, hour: Swift.Int? = Date().hour, minute: Swift.Int? = Date().minute, second: Swift.Int? = Date().second, nanosecond: Swift.Int? = Date().nanosecond)
+  public init(iso8601String: Swift.String)
+  public init(unixTimestamp: Swift.Double)
+}
+extension Date {
+  public static func randomWithinDaysBeforeToday(_ days: Swift.Int) -> Foundation.Date
+  public static func random() -> Foundation.Date
+}
+@objc open class TextField : UIKit.UITextField {
+  public typealias Config = (FriendlyScoreConnect.TextField) -> Swift.Void
+  public func configure(configurate: FriendlyScoreConnect.TextField.Config?)
+  public typealias Action = (UIKit.UITextField) -> Swift.Void
+  @objc override dynamic open func leftViewRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  public var leftViewPadding: CoreGraphics.CGFloat?
+  public var leftTextPadding: CoreGraphics.CGFloat?
+  public func action(closure: @escaping FriendlyScoreConnect.TextField.Action)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UISegmentedControl {
+  public func title(font: UIKit.UIFont)
+  public var segmentTitles: [Swift.String?] {
+    get
+    set
+  }
+  public var segmentImages: [UIKit.UIImage?] {
+    get
+    set
+  }
+}
+extension String {
+  public var regular: Foundation.NSAttributedString {
+    get
+  }
+  public var bold: Foundation.NSAttributedString {
+    get
+  }
+  public var underline: Foundation.NSAttributedString {
+    get
+  }
+  public var strikethrough: Foundation.NSAttributedString {
+    get
+  }
+  public var italic: Foundation.NSAttributedString {
+    get
+  }
+  public func colored(with color: UIKit.UIColor) -> Foundation.NSAttributedString
 }
 extension Bundle {
   public static var FriendlyScoreConnect: Foundation.Bundle? {
