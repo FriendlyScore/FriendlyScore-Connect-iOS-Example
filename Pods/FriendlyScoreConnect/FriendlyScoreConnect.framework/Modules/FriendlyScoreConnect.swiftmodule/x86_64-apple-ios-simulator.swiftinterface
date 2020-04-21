@@ -1,443 +1,822 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 effective-4.1.50 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2 effective-4.1.50 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreConnect
 import Alamofire
-import AudioToolbox
-import Contacts
-import ContactsUI
-import CoreLocation
-import CoreTelephony
+import Device
 import Foundation
 @_exported import FriendlyScoreConnect
 import FriendlyScoreCore
 import JGProgressHUD
 import Kingfisher
-import MapKit
 import Moya
 import ObjectMapper
-import Photos
 import Result
 import Swift
 import UIKit
-public struct Contact {
-  public init(contact: Contacts.CNContact)
-}
-@objc open class Button : UIKit.UIButton {
-  public typealias Action = (FriendlyScoreConnect.Button) -> Swift.Void
+@objc @_inheritsConvenienceInitializers public class ScoreWheel : UIKit.UIView {
+  public var maxScore: Swift.Int
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  public func action(_ closure: @escaping FriendlyScoreConnect.Button.Action)
+  @objc override dynamic public func layoutIfNeeded()
+  public func show(score: Swift.Int, label: Swift.String)
+  public func update(score: Swift.Int, label: Swift.String)
   @objc deinit
 }
-@objc open class Label : UIKit.UILabel {
-  public typealias Action = (FriendlyScoreConnect.Label) -> Swift.Void
+@objc @_hasMissingDesignatedInitializers public class FinanceChart : UIKit.UIView {
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func plot()
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public struct ChartValue : Swift.Comparable, FriendlyScoreConnect.TimeableProtocol {
+  public static func < (lhs: FriendlyScoreConnect.ChartValue, rhs: FriendlyScoreConnect.ChartValue) -> Swift.Bool
+  public init(date: Swift.Int, value: Swift.Double)
+  public var date: Swift.Int
+  public var value: Swift.Double
+  public static func == (a: FriendlyScoreConnect.ChartValue, b: FriendlyScoreConnect.ChartValue) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class ScoreLabel : UIKit.UILabel {
+  public var animationTime: Swift.Double
+  public func to(_ value: Swift.Int)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class PagingBorderLayoutAttributes : UIKit.UICollectionViewLayoutAttributes {
+  open var backgroundColor: UIKit.UIColor?
   open var insets: UIKit.UIEdgeInsets
-  @objc override dynamic open func drawText(in rect: CoreGraphics.CGRect)
-  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
-    @objc get
+  @objc override dynamic open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc override dynamic open func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+public enum PagingDirection : Swift.Equatable {
+  case reverse(sibling: Swift.Bool)
+  case forward(sibling: Swift.Bool)
+  case none
+  public static func == (a: FriendlyScoreConnect.PagingDirection, b: FriendlyScoreConnect.PagingDirection) -> Swift.Bool
+}
+public enum PagingMenuInteraction {
+  case scrolling
+  case swipe
+  case none
+  public static func == (a: FriendlyScoreConnect.PagingMenuInteraction, b: FriendlyScoreConnect.PagingMenuInteraction) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
   }
-  @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
-  public func action(_ closure: @escaping FriendlyScoreConnect.Label.Action)
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum PagingSelectedScrollPosition {
+  case left
+  case right
+  case center
+  case preferCentered
+  public static func == (a: FriendlyScoreConnect.PagingSelectedScrollPosition, b: FriendlyScoreConnect.PagingSelectedScrollPosition) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum FriendlyScoreError : Swift.Error {
+  case jsonMap
+  case filePath
+  public static func == (a: FriendlyScoreConnect.FriendlyScoreError, b: FriendlyScoreConnect.FriendlyScoreError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol PagingViewControllerDelegate : AnyObject {
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, isScrollingFromItem currentPagingItem: FriendlyScoreConnect.PagingItem, toItem upcomingPagingItem: FriendlyScoreConnect.PagingItem?, startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController?, progress: CoreGraphics.CGFloat)
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, willScrollToItem pagingItem: FriendlyScoreConnect.PagingItem, startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController)
+  func pagingViewController(_ pagingViewController: FriendlyScoreConnect.PagingViewController, didScrollToItem pagingItem: FriendlyScoreConnect.PagingItem, startingViewController: UIKit.UIViewController?, destinationViewController: UIKit.UIViewController, transitionSuccessful: Swift.Bool)
+}
+extension PagingViewControllerDelegate {
+  public func pagingViewController(_: FriendlyScoreConnect.PagingViewController, isScrollingFromItem currentPagingItem: FriendlyScoreConnect.PagingItem, toItem upcomingPagingItem: FriendlyScoreConnect.PagingItem?, startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController?, progress: CoreGraphics.CGFloat)
+  public func pagingViewController(_ pagingViewController: FriendlyScoreConnect.PagingViewController, willScrollToItem pagingItem: FriendlyScoreConnect.PagingItem, startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController)
+  public func pagingViewController(_ pagingViewController: FriendlyScoreConnect.PagingViewController, didScrollToItem pagingItem: FriendlyScoreConnect.PagingItem, startingViewController: UIKit.UIViewController?, destinationViewController: UIKit.UIViewController, transitionSuccessful: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers open class PagingIndicatorView : UIKit.UICollectionReusableView {
+  @objc override dynamic open func apply(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes)
+  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers open class PagingCellLayoutAttributes : UIKit.UICollectionViewLayoutAttributes {
+  open var progress: CoreGraphics.CGFloat
+  @objc override dynamic open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc override dynamic open func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
-}
-extension UIColor {
-  public var hexString: Swift.String {
-    get
-  }
-  public var shortHexString: Swift.String? {
-    get
-  }
-  public var rgbComponents: (red: Swift.Int, green: Swift.Int, blue: Swift.Int) {
-    get
-  }
-  public var cgFloatComponents: (red: CoreGraphics.CGFloat, green: CoreGraphics.CGFloat, blue: CoreGraphics.CGFloat) {
-    get
-  }
-  public var hsbaComponents: (hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat) {
-    get
-  }
-  public static var random: UIKit.UIColor {
-    get
-  }
-}
-extension UIColor {
-  convenience public init(hex: Swift.Int, alpha: CoreGraphics.CGFloat)
-  convenience public init(hex: Swift.Int)
-  convenience public init(hexString: Swift.String)
-  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int, transparency: CoreGraphics.CGFloat = 1)
-}
-extension Array where Element : Swift.Equatable {
-  public func contains(_ elements: [Element]) -> Swift.Bool
-  public func indexes(of item: Element) -> [Swift.Int]
-  mutating public func removeAll(_ item: Element)
-  public func chunk(size: Swift.Int = 1) -> [[Element]]
-}
-extension Array {
-  public var randomItem: Element? {
-    get
-  }
-  public var shuffled: [Element] {
-    get
-  }
-  mutating public func shuffle()
-  public func item(at index: Swift.Int) -> Element?
-}
-public struct LocaleInfo {
-  public var locale: Foundation.Locale?
-  public var id: Swift.String? {
-    get
-  }
-  public var country: Swift.String
-  public var code: Swift.String
-  public var phoneCode: Swift.String
-  public var flag: UIKit.UIImage? {
-    get
-  }
-  public var currencyCode: Swift.String? {
-    get
-  }
-  public var currencySymbol: Swift.String? {
-    get
-  }
-  public var currencyName: Swift.String? {
-    get
-  }
-}
-public enum AttributedTextBlock {
-  case header1(Swift.String)
-  case header2(Swift.String)
-  case normal(Swift.String)
-  case list(Swift.String)
-}
-@objc public class Location : ObjectiveC.NSObject {
-  final public let name: Swift.String?
-  final public let location: CoreLocation.CLLocation
-  final public let placemark: CoreLocation.CLPlacemark
-  public var address: Swift.String {
-    get
-  }
-  public init(name: Swift.String?, location: CoreLocation.CLLocation? = nil, placemark: CoreLocation.CLPlacemark)
   @objc override dynamic public init()
-  @objc deinit
 }
-extension Location : MapKit.MKAnnotation {
-  @objc dynamic public var coordinate: CoreLocation.CLLocationCoordinate2D {
-    @objc get
-  }
-  @objc dynamic public var title: Swift.String? {
-    @objc get
-  }
+public protocol PagingViewControllerSizeDelegate : AnyObject {
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, widthForPagingItem pagingItem: FriendlyScoreConnect.PagingItem, isSelected: Swift.Bool) -> CoreGraphics.CGFloat
 }
-@IBDesignable extension UIView {
-  @objc @IBInspectable dynamic public var circleCorner: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var cornerRadius: CoreGraphics.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var borderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var borderWidth: CoreGraphics.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowOffset: CoreGraphics.CGSize {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowOpacity: Swift.Double {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowRadius: CoreGraphics.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowPath: CoreGraphics.CGPath? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowShouldRasterize: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var shadowRasterizationScale: CoreGraphics.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable dynamic public var maskToBounds: Swift.Bool {
-    @objc get
-    @objc set
-  }
-}
-extension UIView {
-  public var size: CoreGraphics.CGSize {
+@objc open class PagingViewController : UIKit.UIViewController, UIKit.UICollectionViewDelegate, FriendlyScoreConnect.EMPageViewControllerDataSource, FriendlyScoreConnect.EMPageViewControllerDelegate {
+  public var menuItemSize: FriendlyScoreConnect.PagingMenuItemSize {
     get
     set
   }
+  public var menuItemSpacing: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var menuInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  public var menuHorizontalAlignment: FriendlyScoreConnect.PagingMenuHorizontalAlignment {
+    get
+    set
+  }
+  public var menuTransition: FriendlyScoreConnect.PagingMenuTransition {
+    get
+    set
+  }
+  public var menuInteraction: FriendlyScoreConnect.PagingMenuInteraction {
+    get
+    set
+  }
+  public var menuLayoutClass: FriendlyScoreConnect.PagingCollectionViewLayout.Type {
+    get
+    set
+  }
+  public var selectedScrollPosition: FriendlyScoreConnect.PagingSelectedScrollPosition {
+    get
+    set
+  }
+  public var indicatorOptions: FriendlyScoreConnect.PagingIndicatorOptions {
+    get
+    set
+  }
+  public var indicatorClass: FriendlyScoreConnect.PagingIndicatorView.Type {
+    get
+    set
+  }
+  public var indicatorColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var borderOptions: FriendlyScoreConnect.PagingBorderOptions {
+    get
+    set
+  }
+  public var borderClass: FriendlyScoreConnect.PagingBorderView.Type {
+    get
+    set
+  }
+  public var borderColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var includeSafeAreaInsets: Swift.Bool {
+    get
+    set
+  }
+  public var font: UIKit.UIFont {
+    get
+    set
+  }
+  public var selectedFont: UIKit.UIFont {
+    get
+    set
+  }
+  public var textColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var selectedTextColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var backgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var selectedBackgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var menuBackgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var contentInteraction: FriendlyScoreConnect.PagingContentInteraction {
+    get
+    set
+  }
+  public var state: FriendlyScoreConnect.PagingState {
+    get
+  }
+  public var visibleItems: FriendlyScoreConnect.PagingItems {
+    get
+  }
+  weak public var dataSource: FriendlyScoreConnect.PagingViewControllerDataSource? {
+    get
+    set
+  }
+  weak public var infiniteDataSource: FriendlyScoreConnect.PagingViewControllerInfiniteDataSource?
+  weak public var delegate: FriendlyScoreConnect.PagingViewControllerDelegate?
+  weak public var sizeDelegate: FriendlyScoreConnect.PagingViewControllerSizeDelegate? {
+    get
+    set
+  }
+  public var collectionViewLayout: FriendlyScoreConnect.PagingCollectionViewLayout {
+    get
+  }
+  final public let collectionView: UIKit.UICollectionView
+  final public let pageViewController: FriendlyScoreConnect.EMPageViewController
+  public var options: FriendlyScoreConnect.PagingOptions {
+    get
+  }
+  @objc dynamic public init()
+  convenience public init(viewControllers: [UIKit.UIViewController])
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func reloadMenu()
+  open func reloadData()
+  open func reloadData(around pagingItem: FriendlyScoreConnect.PagingItem)
+  open func select(pagingItem: FriendlyScoreConnect.PagingItem, animated: Swift.Bool = false)
+  open func select(index: Swift.Int, animated: Swift.Bool = false)
+  @objc override dynamic open func loadView()
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidLayoutSubviews()
+  @objc override dynamic open func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  public func register(_ cellClass: Swift.AnyClass?, for pagingItemType: FriendlyScoreConnect.PagingItem.Type)
+  public func register(_ nib: UIKit.UINib?, for pagingItemType: FriendlyScoreConnect.PagingItem.Type)
+  @objc open func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreGraphics.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreGraphics.CGPoint>)
+  @objc open func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @objc open func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewWillBeginDecelerating(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CoreGraphics.CGPoint) -> CoreGraphics.CGPoint
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, didUnhighlightItemAt indexPath: Foundation.IndexPath)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, didHighlightItemAt indexPath: Foundation.IndexPath)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc open func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, viewControllerBeforeViewController viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc open func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, viewControllerAfterViewController viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc open func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, isScrollingFrom startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController?, progress: CoreGraphics.CGFloat)
+  @objc open func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, willStartScrollingFrom startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController)
+  @objc open func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, didFinishScrollingFrom startingViewController: UIKit.UIViewController?, destinationViewController: UIKit.UIViewController, transitionSuccessful: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension PagingViewController : FriendlyScoreConnect.PagingMenuDataSource {
+  public func pagingItemBefore(pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+  public func pagingItemAfter(pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+}
+extension PagingViewController : FriendlyScoreConnect.PagingMenuDelegate {
+  public func selectContent(pagingItem: FriendlyScoreConnect.PagingItem, direction: FriendlyScoreConnect.PagingDirection, animated: Swift.Bool)
+  public func removeContent()
+}
+public enum PagingState : Swift.Equatable {
+  case empty
+  case selected(pagingItem: FriendlyScoreConnect.PagingItem)
+  case scrolling(pagingItem: FriendlyScoreConnect.PagingItem, upcomingPagingItem: FriendlyScoreConnect.PagingItem?, progress: CoreGraphics.CGFloat, initialContentOffset: CoreGraphics.CGPoint, distance: CoreGraphics.CGFloat)
+}
+extension PagingState {
+  public var currentPagingItem: FriendlyScoreConnect.PagingItem? {
+    get
+  }
+  public var upcomingPagingItem: FriendlyScoreConnect.PagingItem? {
+    get
+  }
+  public var progress: CoreGraphics.CGFloat {
+    get
+  }
+  public var distance: CoreGraphics.CGFloat {
+    get
+  }
+  public var visuallySelectedPagingItem: FriendlyScoreConnect.PagingItem? {
+    get
+  }
+}
+public func == (lhs: FriendlyScoreConnect.PagingState, rhs: FriendlyScoreConnect.PagingState) -> Swift.Bool
+@objc @_inheritsConvenienceInitializers open class PagingBorderView : UIKit.UICollectionReusableView {
+  @objc override dynamic open func apply(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public enum PagingMenuHorizontalAlignment {
+  case left
+  case center
+  public static func == (a: FriendlyScoreConnect.PagingMenuHorizontalAlignment, b: FriendlyScoreConnect.PagingMenuHorizontalAlignment) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct IncomeOutcome : FriendlyScoreConnect.TimeableProtocol {
+  public var income: Swift.Double
+  public var outcome: Swift.Double
+  public var date: Swift.Int
+  public init(date: Swift.Int, income: Swift.Double, outcome: Swift.Double)
+}
+public enum PagingMenuTransition {
+  case scrollAlongside
+  case animateAfter
+  public static func == (a: FriendlyScoreConnect.PagingMenuTransition, b: FriendlyScoreConnect.PagingMenuTransition) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol PagingItem {
+  var identifier: Swift.Int { get }
+  func isEqual(to item: FriendlyScoreConnect.PagingItem) -> Swift.Bool
+  func isBefore(item: FriendlyScoreConnect.PagingItem) -> Swift.Bool
+}
+extension PagingItem where Self : Swift.Equatable {
+  public func isEqual(to item: FriendlyScoreConnect.PagingItem) -> Swift.Bool
+}
+extension PagingItem where Self : Swift.Comparable {
+  public func isBefore(item: FriendlyScoreConnect.PagingItem) -> Swift.Bool
+}
+extension PagingItem where Self : Swift.Hashable {
+  public var identifier: Swift.Int {
+    get
+  }
+}
+public struct ChartBackgroundConfiguartion {
+}
+public protocol PagingMenuDelegate : AnyObject {
+  func selectContent(pagingItem: FriendlyScoreConnect.PagingItem, direction: FriendlyScoreConnect.PagingDirection, animated: Swift.Bool)
+  func removeContent()
+}
+public struct ChartValues {
+  public var history: [FriendlyScoreConnect.ChartValue?]
+  public var prediction: [FriendlyScoreConnect.ChartValue?]
+  public init(history: [FriendlyScoreConnect.ChartValue?], prediction: [FriendlyScoreConnect.ChartValue?])
+}
+public protocol PagingViewControllerInfiniteDataSource : AnyObject {
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, viewControllerFor pagingItem: FriendlyScoreConnect.PagingItem) -> UIKit.UIViewController
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, itemBefore pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, itemAfter pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+}
+@objc @_hasMissingDesignatedInitializers public class IncomeOutcomeChart : UIKit.UIView {
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func plot2()
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc public class ChartContainer : UIKit.UIView {
+  @objc dynamic public init()
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public init(frame: CoreGraphics.CGRect, chart: UIKit.UIView, header: Swift.String, headerColor: UIKit.UIColor)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public enum PagingContentInteraction {
+  case scrolling
+  case none
+  public static func == (a: FriendlyScoreConnect.PagingContentInteraction, b: FriendlyScoreConnect.PagingContentInteraction) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum PagingMenuItemSize {
+  case fixed(width: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat)
+  case sizeToFit(minWidth: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat)
+}
+extension PagingMenuItemSize {
   public var width: CoreGraphics.CGFloat {
     get
-    set
   }
   public var height: CoreGraphics.CGFloat {
     get
+  }
+}
+public enum PagingIndicatorOptions {
+  case hidden
+  case visible(height: CoreGraphics.CGFloat, zIndex: Swift.Int, spacing: UIKit.UIEdgeInsets, insets: UIKit.UIEdgeInsets)
+}
+@objc @_inheritsConvenienceInitializers open class PagingCollectionViewLayout : UIKit.UICollectionViewLayout {
+  public var options: FriendlyScoreConnect.PagingOptions {
+    get
     set
   }
-}
-extension UIView {
-  public typealias Configuration = (UIKit.UIView) -> Swift.Void
-  public func config(configurate: UIKit.UIView.Configuration?)
-  public func roundCorners(_ corners: UIKit.UIRectCorner, radius: CoreGraphics.CGFloat)
-}
-extension UIImageView {
-  open func setImage(string: Swift.String?, color: UIKit.UIColor? = nil, circular: Swift.Bool = false, textAttributes: [Foundation.NSAttributedStringKey : Any]? = nil)
-}
-extension String {
-  public var initials: Swift.String {
+  public var state: FriendlyScoreConnect.PagingState
+  public var visibleItems: FriendlyScoreConnect.PagingItems
+  public var layoutAttributes: [Foundation.IndexPath : FriendlyScoreConnect.PagingCellLayoutAttributes] {
     get
   }
-}
-public typealias GradientColors = (top: UIKit.UIColor, bottom: UIKit.UIColor)
-extension UIImageView {
-  public func setImageForName(string: Swift.String, backgroundColor: UIKit.UIColor? = nil, circular: Swift.Bool, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]?, gradient: Swift.Bool = false)
-  public func setImageForName(string: Swift.String, gradientColors: FriendlyScoreConnect.GradientColors? = nil, circular: Swift.Bool = true, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]? = nil)
-  public func setImageForName(string: Swift.String, backgroundColor: UIKit.UIColor? = nil, circular: Swift.Bool, textAttributes: [Foundation.NSAttributedStringKey : Swift.AnyObject]? = nil, gradient: Swift.Bool = false, gradientColors: FriendlyScoreConnect.GradientColors? = nil)
-}
-public struct Contacts {
-  public enum FetchResults {
-    case success(response: [Contacts.CNContact])
-    case error(error: Swift.Error)
+  public var indicatorLayoutAttributes: FriendlyScoreConnect.PagingIndicatorLayoutAttributes? {
+    get
   }
-  public enum FetchResult {
-    case success(response: Contacts.CNContact)
-    case error(error: Swift.Error)
+  public var borderLayoutAttributes: FriendlyScoreConnect.PagingBorderLayoutAttributes? {
+    get
   }
-  public enum GroupedByAlphabetsFetchResults {
-    case success(response: [Swift.String : [Contacts.CNContact]])
-    case error(error: Swift.Error)
+  public var invalidationState: FriendlyScoreConnect.InvalidationState
+  @objc override dynamic open var collectionViewContentSize: CoreGraphics.CGSize {
+    @objc get
   }
-  public static func requestAccess(_ requestGranted: @escaping (Swift.Bool, Swift.Error?) -> ())
-  public static func authorizationStatus(_ requestStatus: @escaping (Contacts.CNAuthorizationStatus) -> ())
-  public static func fetchContacts(completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
-  @available(iOS 10.0, *)
-  public static func fetchContacts(ContactsSortorder sortOrder: Contacts.CNContactSortOrder, completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
-  @available(iOS 10.0, *)
-  public static func fetchContactsGroupedByAlphabets(completionHandler: @escaping (FriendlyScoreConnect.Contacts.GroupedByAlphabetsFetchResults) -> ())
-  public static func fetchContactsOnBackgroundThread(completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
-  public static func searchContact(searchString string: Swift.String, completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
-  public static func getContactFromID(Identifires identifiers: [Swift.String], completionHandler: @escaping (FriendlyScoreConnect.Contacts.FetchResults) -> ())
+  @objc override dynamic open class var layoutAttributesClass: Swift.AnyClass {
+    @objc get
+  }
+  @objc override required dynamic public init()
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic open func prepare()
+  @objc override dynamic open func invalidateLayout()
+  @objc override dynamic open func invalidateLayout(with context: UIKit.UICollectionViewLayoutInvalidationContext)
+  @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @objc override dynamic open func layoutAttributesForDecorationView(ofKind elementKind: Swift.String, at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @objc override dynamic open func layoutAttributesForElements(in rect: CoreGraphics.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @objc deinit
 }
-public struct Telephone {
-  public static func isCapableToCall(completionHandler: @escaping (Swift.Bool) -> ())
-  public static func isCapableToSMS(completionHandler: @escaping (Swift.Bool) -> ())
-  public static func CNPhoneNumberToString(CNPhoneNumber: Contacts.CNPhoneNumber) -> Swift.String
-  public static func makeCall(CNPhoneNumber: Contacts.CNPhoneNumber)
+@objc open class PagingView : UIKit.UIView {
+  final public let options: FriendlyScoreConnect.PagingOptions
+  final public let collectionView: UIKit.UICollectionView
+  final public let pageView: UIKit.UIView
+  public init(options: FriendlyScoreConnect.PagingOptions, collectionView: UIKit.UICollectionView, pageView: UIKit.UIView)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func configure()
+  open func setupConstraints()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
 }
-public func Log<T>(_ object: T?, filename: Swift.String = #file, line: Swift.Int = #line, funcname: Swift.String = #function)
-public typealias TelegramSelection = (FriendlyScoreConnect.TelegramSelectionType) -> ()
-public enum TelegramSelectionType {
-  case photo([Photos.PHAsset])
-  case location(FriendlyScoreConnect.Location?)
-  case contact(FriendlyScoreConnect.Contact?)
+public struct PagingItems {
+  public let items: [FriendlyScoreConnect.PagingItem]
+  public func indexPath(for pagingItem: FriendlyScoreConnect.PagingItem) -> Foundation.IndexPath?
+  public func pagingItem(for indexPath: Foundation.IndexPath) -> FriendlyScoreConnect.PagingItem
+  public func direction(from: FriendlyScoreConnect.PagingItem, to: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingDirection
 }
-extension UIAlertController {
-  public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffectStyle? = nil, completion: (() -> Swift.Void)? = nil)
+@objc @_inheritsConvenienceInitializers public class CategoryWheel : UIKit.UIView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func layoutIfNeeded()
+  @objc deinit
 }
-public func < <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Comparable
-public func > <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Comparable
-public func == <T>(lhs: T?, rhs: T?) -> Swift.Bool where T : Swift.Equatable
-extension UITextView {
-  public func scrollToBottom()
-  public func scrollToTop()
+public enum PagingBorderOptions {
+  case hidden
+  case visible(height: CoreGraphics.CGFloat, zIndex: Swift.Int, insets: UIKit.UIEdgeInsets)
 }
-public class DateFormatTransform : ObjectMapper.TransformType {
+@objc @_inheritsConvenienceInitializers open class PagingCell : UIKit.UICollectionViewCell {
+  @objc override dynamic open func preferredLayoutAttributesFitting(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes) -> UIKit.UICollectionViewLayoutAttributes
+  open func setPagingItem(_ pagingItem: FriendlyScoreConnect.PagingItem, selected: Swift.Bool, options: FriendlyScoreConnect.PagingOptions)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers public class DateFormatTransform : ObjectMapper.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
   public func transformFromJSON(_ value: Any?) -> FriendlyScoreConnect.DateFormatTransform.Object?
   public func transformToJSON(_ value: Foundation.Date?) -> FriendlyScoreConnect.DateFormatTransform.JSON?
   @objc deinit
 }
-extension UITextField {
-  public typealias TextFieldConfig = (UIKit.UITextField) -> Swift.Void
-  public func config(textField configurate: UIKit.UITextField.TextFieldConfig?)
+@objc @_inheritsConvenienceInitializers open class PagingMenuView : UIKit.UIView {
+  public var menuItemSize: FriendlyScoreConnect.PagingMenuItemSize {
+    get
+    set
+  }
+  public var menuItemSpacing: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var menuInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  public var menuHorizontalAlignment: FriendlyScoreConnect.PagingMenuHorizontalAlignment {
+    get
+    set
+  }
+  public var menuTransition: FriendlyScoreConnect.PagingMenuTransition {
+    get
+    set
+  }
+  public var menuInteraction: FriendlyScoreConnect.PagingMenuInteraction {
+    get
+    set
+  }
+  public var menuLayoutClass: FriendlyScoreConnect.PagingCollectionViewLayout.Type {
+    get
+    set
+  }
+  public var selectedScrollPosition: FriendlyScoreConnect.PagingSelectedScrollPosition {
+    get
+    set
+  }
+  public var indicatorOptions: FriendlyScoreConnect.PagingIndicatorOptions {
+    get
+    set
+  }
+  public var indicatorClass: FriendlyScoreConnect.PagingIndicatorView.Type {
+    get
+    set
+  }
+  public var indicatorColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var borderOptions: FriendlyScoreConnect.PagingBorderOptions {
+    get
+    set
+  }
+  public var borderClass: FriendlyScoreConnect.PagingBorderView.Type {
+    get
+    set
+  }
+  public var borderColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var includeSafeAreaInsets: Swift.Bool {
+    get
+    set
+  }
+  public var font: UIKit.UIFont {
+    get
+    set
+  }
+  public var selectedFont: UIKit.UIFont {
+    get
+    set
+  }
+  public var textColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var selectedTextColor: UIKit.UIColor {
+    get
+    set
+  }
+  @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  public var selectedBackgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var menuBackgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  weak public var delegate: FriendlyScoreConnect.PagingMenuDelegate? {
+    get
+    set
+  }
+  weak public var dataSource: FriendlyScoreConnect.PagingMenuDataSource? {
+    get
+    set
+  }
+  public var state: FriendlyScoreConnect.PagingState {
+    get
+  }
+  public var visibleItems: FriendlyScoreConnect.PagingItems {
+    get
+  }
+  public var collectionViewLayout: FriendlyScoreConnect.PagingCollectionViewLayout {
+    get
+  }
+  public var collectionView: UIKit.UICollectionView {
+    get
+    set
+  }
+  public var options: FriendlyScoreConnect.PagingOptions {
+    get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func viewAppeared()
+  open func transitionSize()
+  open func contentScrolled(progress: CoreGraphics.CGFloat)
+  open func contentFinishedScrolling()
+  open func reload(around pagingItem: FriendlyScoreConnect.PagingItem)
+  open func select(pagingItem: FriendlyScoreConnect.PagingItem, animated: Swift.Bool = false)
+  @objc deinit
 }
-extension UITextField {
-  public func setPlaceHolderTextColor(_ color: UIKit.UIColor)
-  public func placeholder(text value: Swift.String, color: UIKit.UIColor = .red)
-}
-public struct Assets {
-  public static func requestAccess(_ requestGranted: @escaping (Photos.PHAuthorizationStatus) -> ())
-  public enum FetchResults {
-    case success(response: [Photos.PHAsset])
-    case error(error: Swift.Error)
-  }
-  public static func fetch(_ completion: @escaping (FriendlyScoreConnect.Assets.FetchResults) -> Swift.Void)
-  public enum ResolveResult {
-    case success(response: UIKit.UIImage?)
-    case error(error: Swift.Error)
-  }
-  public static func resolve(asset: Photos.PHAsset, size: CoreGraphics.CGSize = PHImageManagerMaximumSize, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
-  public enum ResolveResults {
-    case success(response: [UIKit.UIImage])
-    case error(error: Swift.Error)
-  }
-  public static func resolve(assets: [Photos.PHAsset], size: CoreGraphics.CGSize = CGSize(width: 720, height: 1280), completion: @escaping ([UIKit.UIImage]) -> Swift.Void) -> [UIKit.UIImage]
+extension PagingMenuView : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
 }
 extension FriendlyScore {
   public static func configureConnect()
+  public static var tintColor: UIKit.UIColor
 }
-extension Date {
-  public var calendar: Foundation.Calendar {
-    get
-  }
-  public var era: Swift.Int {
-    get
-  }
-  public var year: Swift.Int {
-    get
-    set
-  }
-  public var quarter: Swift.Int {
-    get
-  }
-  public var month: Swift.Int {
-    get
-    set
-  }
-  public var weekOfYear: Swift.Int {
-    get
-  }
-  public var weekOfMonth: Swift.Int {
-    get
-  }
-  public var weekday: Swift.Int {
-    get
-  }
-  public var day: Swift.Int {
-    get
-    set
-  }
-  public var hour: Swift.Int {
-    get
-    set
-  }
-  public var minute: Swift.Int {
-    get
-    set
-  }
-  public var second: Swift.Int {
-    get
-    set
-  }
-  public var nanosecond: Swift.Int {
-    get
-  }
-  public var isInFuture: Swift.Bool {
-    get
-  }
-  public var isInPast: Swift.Bool {
-    get
-  }
-  public var isInToday: Swift.Bool {
-    get
-  }
-  public var iso8601String: Swift.String {
-    get
-  }
-  public var nearestFiveMinutes: Foundation.Date {
-    get
-  }
-  public var nearestTenMinutes: Foundation.Date {
-    get
-  }
-  public var nearestHourQuarter: Foundation.Date {
-    get
-  }
-  public var nearestHalfHour: Foundation.Date {
-    get
-  }
-  public var timeZone: Foundation.TimeZone {
-    get
-  }
-  public var unixTimestamp: Swift.Double {
-    get
-  }
+@objc @_inheritsConvenienceInitializers open class PagingIndicatorLayoutAttributes : UIKit.UICollectionViewLayoutAttributes {
+  open var backgroundColor: UIKit.UIColor?
+  @objc override dynamic open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc override dynamic open func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
 }
-extension Date {
-  mutating public func add(_ component: Foundation.Calendar.Component, value: Swift.Int)
-  public func adding(_ component: Foundation.Calendar.Component, value: Swift.Int) -> Foundation.Date
-  public func changing(_ component: Foundation.Calendar.Component, value: Swift.Int) -> Foundation.Date
-  public func beginning(of component: Foundation.Calendar.Component) -> Foundation.Date?
-  public func end(of component: Foundation.Calendar.Component) -> Foundation.Date?
-  public func dateString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
-  public func dateTimeString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
-  public func isInCurrent(_ component: Foundation.Calendar.Component) -> Swift.Bool
-  public func timeString(ofStyle style: Foundation.DateFormatter.Style = .medium) -> Swift.String
+public struct PagingIndexItem : FriendlyScoreConnect.PagingItem, Swift.Hashable, Swift.Comparable {
+  public let index: Swift.Int
+  public let title: Swift.String
+  public init(index: Swift.Int, title: Swift.String)
+  public static func < (lhs: FriendlyScoreConnect.PagingIndexItem, rhs: FriendlyScoreConnect.PagingIndexItem) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: FriendlyScoreConnect.PagingIndexItem, b: FriendlyScoreConnect.PagingIndexItem) -> Swift.Bool
 }
-extension Date {
-  public init(calendar: Foundation.Calendar? = Calendar.current, timeZone: Foundation.TimeZone? = TimeZone.current, era: Swift.Int? = Date().era, year: Swift.Int? = Date().year, month: Swift.Int? = Date().month, day: Swift.Int? = Date().day, hour: Swift.Int? = Date().hour, minute: Swift.Int? = Date().minute, second: Swift.Int? = Date().second, nanosecond: Swift.Int? = Date().nanosecond)
-  public init(iso8601String: Swift.String)
-  public init(unixTimestamp: Swift.Double)
+@objc @_inheritsConvenienceInitializers open class PagingInvalidationContext : UIKit.UICollectionViewLayoutInvalidationContext {
+  @objc override dynamic public init()
+  @objc deinit
 }
-extension Date {
-  public static func randomWithinDaysBeforeToday(_ days: Swift.Int) -> Foundation.Date
-  public static func random() -> Foundation.Date
+public enum PagingMenuItemSource {
+  case `class`(type: FriendlyScoreConnect.PagingCell.Type)
+  case nib(nib: UIKit.UINib)
 }
-@objc open class TextField : UIKit.UITextField {
-  public typealias Config = (FriendlyScoreConnect.TextField) -> Swift.Void
-  public func configure(configurate: FriendlyScoreConnect.TextField.Config?)
-  public typealias Action = (UIKit.UITextField) -> Swift.Void
-  @objc override dynamic open func leftViewRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
-  @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
-  @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
-  public var leftViewPadding: CoreGraphics.CGFloat?
-  public var leftTextPadding: CoreGraphics.CGFloat?
-  public func action(closure: @escaping FriendlyScoreConnect.TextField.Action)
+extension PagingMenuItemSource : Swift.Equatable {
+  public static func == (lhs: FriendlyScoreConnect.PagingMenuItemSource, rhs: FriendlyScoreConnect.PagingMenuItemSource) -> Swift.Bool
+}
+public protocol PagingMenuDataSource : AnyObject {
+  func pagingItemBefore(pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+  func pagingItemAfter(pagingItem: FriendlyScoreConnect.PagingItem) -> FriendlyScoreConnect.PagingItem?
+}
+@objc @_hasMissingDesignatedInitializers public class ChartBackgroundView : UIKit.UIView {
+  @objc override dynamic public func layoutSubviews()
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc public protocol EMPageViewControllerDataSource {
+  @objc func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, viewControllerBeforeViewController viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, viewControllerAfterViewController viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+@objc public protocol EMPageViewControllerDelegate {
+  @objc optional func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, willStartScrollingFrom startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController)
+  @objc optional func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, isScrollingFrom startingViewController: UIKit.UIViewController, destinationViewController: UIKit.UIViewController?, progress: CoreGraphics.CGFloat)
+  @objc optional func em_pageViewController(_ pageViewController: FriendlyScoreConnect.EMPageViewController, didFinishScrollingFrom startingViewController: UIKit.UIViewController?, destinationViewController: UIKit.UIViewController, transitionSuccessful: Swift.Bool)
+}
+@objc public enum EMPageViewControllerNavigationDirection : Swift.Int {
+  case forward
+  case reverse
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum EMPageViewControllerNavigationOrientation : Swift.Int {
+  case horizontal
+  case vertical
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class EMPageViewController : UIKit.UIViewController, UIKit.UIScrollViewDelegate {
+  weak open var dataSource: FriendlyScoreConnect.EMPageViewControllerDataSource?
+  weak open var delegate: FriendlyScoreConnect.EMPageViewControllerDelegate?
+  open var navigationOrientation: FriendlyScoreConnect.EMPageViewControllerNavigationOrientation {
+    get
+  }
+  open var scrollView: UIKit.UIScrollView {
+    get
+  }
+  open var selectedViewController: UIKit.UIViewController? {
+    get
+  }
+  open var scrolling: Swift.Bool {
+    get
+  }
+  open var navigationDirection: FriendlyScoreConnect.EMPageViewControllerNavigationDirection? {
+    get
+  }
+  convenience public init(navigationOrientation: FriendlyScoreConnect.EMPageViewControllerNavigationOrientation)
+  open func selectViewController(_ viewController: UIKit.UIViewController, direction: FriendlyScoreConnect.EMPageViewControllerNavigationDirection, animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)?)
+  open func removeAllViewControllers()
+  @objc(scrollForwardAnimated:completion:) open func scrollForward(animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc(scrollReverseAnimated:completion:) open func scrollReverse(animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)?)
+  @available(*, unavailable, renamed: "scrollForward(animated:completion:)")
+  @nonobjc open func scrollForwardAnimated(_ animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)?)
+  @available(*, unavailable, renamed: "scrollReverse(animated:completion:)")
+  @nonobjc open func scrollReverseAnimated(_ animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open var shouldAutomaticallyForwardAppearanceMethods: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillLayoutSubviews()
+  @objc open func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @objc open func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension UISegmentedControl {
-  public func title(font: UIKit.UIFont)
-  public var segmentTitles: [Swift.String?] {
+public struct PagingOptions {
+  public var menuItemSize: FriendlyScoreConnect.PagingMenuItemSize
+  public var menuItemSpacing: CoreGraphics.CGFloat
+  public var menuInsets: UIKit.UIEdgeInsets
+  public var menuHorizontalAlignment: FriendlyScoreConnect.PagingMenuHorizontalAlignment
+  public var menuTransition: FriendlyScoreConnect.PagingMenuTransition
+  public var menuInteraction: FriendlyScoreConnect.PagingMenuInteraction
+  public var menuLayoutClass: FriendlyScoreConnect.PagingCollectionViewLayout.Type
+  public var selectedScrollPosition: FriendlyScoreConnect.PagingSelectedScrollPosition
+  public var indicatorOptions: FriendlyScoreConnect.PagingIndicatorOptions
+  public var indicatorClass: FriendlyScoreConnect.PagingIndicatorView.Type
+  public var indicatorColor: UIKit.UIColor
+  public var borderOptions: FriendlyScoreConnect.PagingBorderOptions
+  public var borderClass: FriendlyScoreConnect.PagingBorderView.Type
+  public var borderColor: UIKit.UIColor
+  public var includeSafeAreaInsets: Swift.Bool
+  public var font: UIKit.UIFont
+  public var selectedFont: UIKit.UIFont
+  public var textColor: UIKit.UIColor
+  public var selectedTextColor: UIKit.UIColor
+  public var backgroundColor: UIKit.UIColor
+  public var selectedBackgroundColor: UIKit.UIColor
+  public var menuBackgroundColor: UIKit.UIColor
+  public var scrollPosition: UIKit.UICollectionViewScrollPosition {
     get
-    set
   }
-  public var segmentImages: [UIKit.UIImage?] {
+  public var menuHeight: CoreGraphics.CGFloat {
     get
-    set
   }
+  public var estimatedItemWidth: CoreGraphics.CGFloat {
+    get
+  }
+  public init()
 }
-extension String {
-  public var regular: Foundation.NSAttributedString {
+@objc @_inheritsConvenienceInitializers open class PagingTitleCell : FriendlyScoreConnect.PagingCell {
+  final public let titleLabel: UIKit.UILabel
+  @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  override open func setPagingItem(_ pagingItem: FriendlyScoreConnect.PagingItem, selected: Swift.Bool, options: FriendlyScoreConnect.PagingOptions)
+  open func configure()
+  @objc override dynamic open func layoutSubviews()
+  open func configureTitleLabel()
+  open func configureAccessibility()
+  @objc override dynamic open func apply(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes)
+  @objc deinit
+}
+public protocol PagingViewControllerDataSource : AnyObject {
+  func numberOfViewControllers(in pagingViewController: FriendlyScoreConnect.PagingViewController) -> Swift.Int
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, viewControllerAt index: Swift.Int) -> UIKit.UIViewController
+  func pagingViewController(_: FriendlyScoreConnect.PagingViewController, pagingItemAt index: Swift.Int) -> FriendlyScoreConnect.PagingItem
+}
+public enum Theme {
+  case light
+  case dark
+  case custom(themePath: Swift.String)
+}
+public enum InvalidationState {
+  case nothing
+  case everything
+  case sizes
+  public init(_ invalidationContext: UIKit.UICollectionViewLayoutInvalidationContext)
+  public static func + (lhs: FriendlyScoreConnect.InvalidationState, rhs: FriendlyScoreConnect.InvalidationState) -> FriendlyScoreConnect.InvalidationState
+  public static func == (a: FriendlyScoreConnect.InvalidationState, b: FriendlyScoreConnect.InvalidationState) -> Swift.Bool
+  public var hashValue: Swift.Int {
     get
   }
-  public var bold: Foundation.NSAttributedString {
-    get
-  }
-  public var underline: Foundation.NSAttributedString {
-    get
-  }
-  public var strikethrough: Foundation.NSAttributedString {
-    get
-  }
-  public var italic: Foundation.NSAttributedString {
-    get
-  }
-  public func colored(with color: UIKit.UIColor) -> Foundation.NSAttributedString
+  public func hash(into hasher: inout Swift.Hasher)
 }
 extension Bundle {
   public static var FriendlyScoreConnect: Foundation.Bundle? {
     get
   }
 }
+extension FriendlyScore {
+  public static func showPersonalFinanceManager(with credentials: FriendlyScoreCore.Credentials, theme: FriendlyScoreConnect.Theme = .light)
+}
+extension FriendlyScore {
+  public static func showCredibilityAndAffordability(with credentials: FriendlyScoreCore.Credentials)
+}
+extension UIColor {
+  convenience public init?(hex: Swift.String)
+}
+public protocol TimeableProtocol {
+  var date: Swift.Int { get set }
+}
+extension FriendlyScoreConnect.PagingMenuInteraction : Swift.Equatable {}
+extension FriendlyScoreConnect.PagingMenuInteraction : Swift.Hashable {}
+extension FriendlyScoreConnect.PagingSelectedScrollPosition : Swift.Equatable {}
+extension FriendlyScoreConnect.PagingSelectedScrollPosition : Swift.Hashable {}
+extension FriendlyScoreConnect.FriendlyScoreError : Swift.Equatable {}
+extension FriendlyScoreConnect.FriendlyScoreError : Swift.Hashable {}
+extension FriendlyScoreConnect.PagingMenuHorizontalAlignment : Swift.Equatable {}
+extension FriendlyScoreConnect.PagingMenuHorizontalAlignment : Swift.Hashable {}
+extension FriendlyScoreConnect.PagingMenuTransition : Swift.Equatable {}
+extension FriendlyScoreConnect.PagingMenuTransition : Swift.Hashable {}
+extension FriendlyScoreConnect.PagingContentInteraction : Swift.Equatable {}
+extension FriendlyScoreConnect.PagingContentInteraction : Swift.Hashable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationDirection : Swift.Equatable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationDirection : Swift.Hashable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationDirection : Swift.RawRepresentable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationOrientation : Swift.Equatable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationOrientation : Swift.Hashable {}
+extension FriendlyScoreConnect.EMPageViewControllerNavigationOrientation : Swift.RawRepresentable {}
+extension FriendlyScoreConnect.InvalidationState : Swift.Equatable {}
+extension FriendlyScoreConnect.InvalidationState : Swift.Hashable {}
