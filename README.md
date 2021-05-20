@@ -87,11 +87,19 @@ Start by importing `FriendlyScoreCore`:
 import FriendlyScoreCore
 ```
 
+You can select which environment you want to use the FriendlyScore SDK and select the Client Id for that environment
+
+  | Environment |   Description |
+  | :----       | :--             |
+  | sandbox     | Use this environment to test your integration |
+  | production  | Production API environment |
+
 Create the `ClientId` object
 ```swift
 let myClientId = ClientId(stringLiteral: "YOUR_CLIENT_ID")
 ```
 Create the `Credentials` object using `userReference`, which is any alphanumeric string that identifies the user in your systems. It can be used later to access information from the FriendlyScore [API](https://friendlyscore.com/developers) :
+
 ```swift
 let myCredentials = Credentials(clientId: myClientId, userReference: "YOUR_USER_REFERENCE", environment: .sandbox)
 ```
@@ -104,37 +112,48 @@ button.setTitle("Launch FriendyScore!", for: .normal)
 button.addTarget(self, action: #selector(buttonTapHandler), for: .touchUpInside)
 
 self.view.addSubview(button)
+```
 
+### Customization
 
+#### Theme
+FriendlyScoreConnect can be presented with light (default) or dark theme, with are predefined list of colors and icons.
 
+To use custom colors for the categories, you must override the color keys in your application. Custom theme examples is included in the [custom_theme.json](https://github.com/FriendlyScore/FriendlyScore-Connect-iOS-Example/tree/master/FriendlyScoreConnectDemo/custom_theme.json). The color keys and descriptions are in the `Colors` section.
+
+```
 /*
     Optional - Built-in themes = .light, .dark, .custom(themePath: String). Default theme is .light
 */
 let connectTheme: ConnectTheme = .light
+```
 
+#### Other
+
+```
 /*
-    =Optional - Set a flag whether to display only the back button on the screen with the list of banks. Default is true
+    Optional - Set a flag whether to display only the back button on the screen with the list of banks. Default is true
 */
 let showOnlyBackButtonIcon: Bool = true
 
 
 /*
-            Optional - The label to show on the back button on the view with the list of banks to direct users back to your app. Default label is "Back". Ad
+    Optional - The label to show on the back button on the view with the list of banks to direct users back to your app. Default label is "Back". Ad
 */
 let backButtonLabel: String = "Back"
+```
+Initiate FriendlyScore View with the options above
 
-
-
+```
 @objc func buttonTapHandler(button:UIButton) {
     FriendlyScore.show(with: credentials, theme: .light, showOnlyBackButtonIcon: showOnlyBackButtonIcon, backButtonLabel: backButtonLabel)
 }
 ```
 
-Custom theme examples is included in the [custom_theme.json](https://github.com/FriendlyScore/FriendlyScore-Connect-iOS-Example/tree/master/FriendlyScoreConnectDemo/custom_theme.json)
+
 
 
 ### Colors
-
 
 ##### Colors across views
 | Color Key                                     |  Description                                                                                  |  
