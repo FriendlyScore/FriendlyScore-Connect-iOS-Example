@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2 effective-4.1.50 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.1.50 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreConnect
 import Alamofire
 import Device
@@ -312,6 +312,9 @@ public enum PagingMenuHorizontalAlignment {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
+extension UIImageView {
+  public func withRoundedCorners(radius: CoreGraphics.CGFloat = 10.0)
+}
 public struct IncomeOutcome : FriendlyScoreConnect.TimeableProtocol {
   public var income: Swift.Double
   public var outcome: Swift.Double
@@ -372,6 +375,24 @@ public protocol PagingViewControllerInfiniteDataSource : AnyObject {
   public init(frame: CoreGraphics.CGRect, chart: UIKit.UIView, header: Swift.String, headerColor: UIKit.UIColor)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public class UUID4 : Swift.Equatable {
+  public init()
+  public init?(bytes: [Swift.UInt8])
+  public init?(string: Swift.String)
+  @objc deinit
+}
+public func == (lhs: FriendlyScoreConnect.UUID4, rhs: FriendlyScoreConnect.UUID4) -> Swift.Bool
+extension UUID4 : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension UUID4 : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum PagingContentInteraction {
   case scrolling
@@ -464,6 +485,11 @@ public enum PagingBorderOptions {
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension UIButton {
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
 }
 @_hasMissingDesignatedInitializers public class DateFormatTransform : ObjectMapper.TransformType {
   public typealias Object = Foundation.Date

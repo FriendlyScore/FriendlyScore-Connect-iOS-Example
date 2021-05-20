@@ -22,12 +22,13 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>YOUR-CLIENT-ID</string>
+			<string>com.friendlyscore.ConnectDemo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>YOUR-CLIENT-ID</string>
+				<string>com.friendlyscore.ConnectDemo</string>
 			</array>
 		</dict>
+		<dict/>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

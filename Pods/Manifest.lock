@@ -1,43 +1,41 @@
 PODS:
   - Alamofire (4.9.1)
   - Device (3.2.1)
-  - FriendlyScoreConnect (1.0.5):
-    - FriendlyScoreCore (~> 1.0.7)
+  - FriendlyScoreConnect (1.0.10):
+    - FriendlyScoreCore (~> 1.0.10)
     - Kingfisher
-  - FriendlyScoreCore (1.0.8):
+  - FriendlyScoreCore (1.0.10):
     - Alamofire (~> 4.9.1)
     - Device (~> 3.2.1)
     - Hero (~> 1.5.0)
     - IQKeyboardManager (~> 6.5.4)
     - JGProgressHUD (~> 2.1)
     - Moya (~> 13.0.1)
-    - ObjectMapper (~> 3.5.2)
-    - PhoneNumberKit (~> 3.2.0)
+    - ObjectMapper (~> 4.2.0)
+    - PhoneNumberKit (~> 3.3.3)
     - Result (~> 4.1.0)
     - SnapKit (~> 5.0.1)
   - Hero (1.5.0)
-  - IQKeyboardManager (6.5.5)
-  - JGProgressHUD (2.1)
-  - Kingfisher (5.13.4):
-    - Kingfisher/Core (= 5.13.4)
-  - Kingfisher/Core (5.13.4)
+  - IQKeyboardManager (6.5.6)
+  - JGProgressHUD (2.2)
+  - Kingfisher (6.3.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
-  - ObjectMapper (3.5.2)
-  - PhoneNumberKit (3.2.0):
-    - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
-    - PhoneNumberKit/UIKit (= 3.2.0)
-  - PhoneNumberKit/PhoneNumberKitCore (3.2.0)
-  - PhoneNumberKit/UIKit (3.2.0):
+  - ObjectMapper (4.2.0)
+  - PhoneNumberKit (3.3.3):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.3)
+    - PhoneNumberKit/UIKit (= 3.3.3)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.3)
+  - PhoneNumberKit/UIKit (3.3.3):
     - PhoneNumberKit/PhoneNumberKitCore
   - Result (4.1.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - FriendlyScoreConnect (~> 1.0.5)
+  - FriendlyScoreConnect (~> 1.0.10)
 
 SPEC REPOS:
   trunk:
@@ -58,18 +56,18 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
-  FriendlyScoreConnect: 5481f9e1b7b79c651f78e796b9d5571591c59b94
-  FriendlyScoreCore: f6a741c7e398226d88f416a6435e60f84663fa22
+  FriendlyScoreConnect: 063796cd742eea2cb4244aa4ee5fc2e86621ff78
+  FriendlyScoreCore: 95d97677d5eb3943c2bba96b2613afe06dd874ef
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
-  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
-  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
-  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
-  PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PhoneNumberKit: 4ce83273551c4d2ae10b7361162f4283dd02835f
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 35dac7fac5134c0cdba5f7b28ca793e0578b6562
+PODFILE CHECKSUM: 1898874b75558b6418f8501fb6b37ebab1880a4b
 
 COCOAPODS: 1.8.4
