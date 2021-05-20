@@ -199,11 +199,26 @@ FriendlyScore.errorHandler = { error in
     }
 }
 ```
+
+## Error Definition
+| Error                    | Definitions  | 
+| -------------             | -------------|
+| userReferenceAuthError   | Present if there was an authentication error for the supplied `userReference`.
+| serviceDenied             | Present if service was denied. Please check the description for more information.
+| incompleteConfiguration             | Present if the configuration on the server is incomplete. Please check the description for more information.
+| serverError               | Present if there was a critical error on the server.      
+
+## Response State Definition
+| State                    | Definitions  | 
+| -------------             | -------------|
+| userClosedView            | Present if the user Closed the FriendlyScore Flow.      
+| userCompletedFlow         | Present if the user Completed the FriendlyScore flow.
+
 ## Next Steps
 
 ### Access to Production Environment
 
-You can continue to integrate FriendlyScore Connect in your app in our sandbox and development environments. Once you have completed testing, you can request access to the production environment in the developer console or speak directly to your account manager.
+You can continue to integrate FriendlyScore Connect in your app in our sandbox environment. Once you have completed testing, you can request access to the production environment in the developer console or speak directly to your account manager.
 
 ### Support 
 
