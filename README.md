@@ -15,7 +15,7 @@ To get started quickly with FriendlyScore Connect for iOS, clone the GitHub repo
 
 - Xcode 10 or greater
 - iOS 12.0 or greater
-- [FriendlyScore API keys](https://friendlyscore.com/company/keys)
+- [FriendlyScore Client Id](https://friendlyscore.com/company/keys)
 
 ## Quickstart Demo App
 
