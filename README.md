@@ -4,6 +4,7 @@
   <p align="center">
     <img src="connect_flow.png" width="200" height="400" />
   </p>
+
 ### Introduction
 
 Here you can find instructions on how to integrate and use FriendlyScore Connect for iOS.
