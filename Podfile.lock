@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - Device (3.2.1)
-  - FriendlyScoreConnect (1.0.10):
+  - FriendlyScoreConnect (1.0.11):
     - FriendlyScoreCore (~> 1.0.10)
     - Kingfisher
   - FriendlyScoreCore (1.0.10):
@@ -35,7 +35,7 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - FriendlyScoreConnect (~> 1.0.10)
+  - FriendlyScoreConnect (~> 1.0.11)
 
 SPEC REPOS:
   trunk:
@@ -56,7 +56,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
-  FriendlyScoreConnect: 063796cd742eea2cb4244aa4ee5fc2e86621ff78
+  FriendlyScoreConnect: 53fe056ddaef7461ce3ce7039d56b780946ced1b
   FriendlyScoreCore: 95d97677d5eb3943c2bba96b2613afe06dd874ef
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
@@ -68,6 +68,6 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 1898874b75558b6418f8501fb6b37ebab1880a4b
+PODFILE CHECKSUM: 6d5d729e3744660549e7fa1e7e87acf8b6062284
 
 COCOAPODS: 1.8.4

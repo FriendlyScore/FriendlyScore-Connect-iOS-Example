@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 
 
         /*
-            Optional - The label to show on the back button on the view with the list of banks to direct users back to your app. Default label is "Back". Ad
+            Optional - The label to show on the back button on the view with the list of banks to direct users back to your app. Default label is "Back".
         */
         let backButtonLabel: String = "Back"
 

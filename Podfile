@@ -4,7 +4,7 @@
 target 'FriendlyScoreConnectDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'FriendlyScoreConnect', '~> 1.0.10'
+  pod 'FriendlyScoreConnect', '~> 1.0.11'
   
   # Pods for FriendlyScoreConnectDemo
   
